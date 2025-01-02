@@ -12,13 +12,13 @@ https://boto3.amazonaws.com/v1/documentation/api/latest/index.html
 import boto3
 
 ec2_client = boto3.client('ec2')
-ecw_resource = boto3.resource('ec2')
+ec2_resource = boto3.resource('ec2')
 
 # Returns dictionary
 vpcs = ec2_client.describe_vpcs()
 
 # Returns newly created resource instnce
-new_vpc_resource = ecw_resource.create_vpc(CidrBlock='10.0.0.0/16')
+new_vpc_resource = ec2_resource.create_vpc(CidrBlock='10.0.0.0/16')
 new_vpc_resource.create_subnet(CidrBlock='10.0.1.0/24')
 ```
 
