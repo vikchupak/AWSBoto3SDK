@@ -17,7 +17,7 @@ ec2_resource = boto3.resource('ec2')
 # Returns dictionary
 vpcs = ec2_client.describe_vpcs()
 
-# Returns newly created resource instnce
+# Returns newly created resource instnce(object)
 new_vpc_resource = ec2_resource.create_vpc(CidrBlock='10.0.0.0/16')
 new_vpc_resource.create_subnet(CidrBlock='10.0.1.0/24')
 ```
